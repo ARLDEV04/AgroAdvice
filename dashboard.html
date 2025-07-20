@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroAdvice - Dashboard</title>
-    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
@@ -49,22 +49,6 @@
                     <p>Vérifiez l'humidité du sol avant d'arroser</p>
                 </div>
             </div>
-
-            <!-- <div class="card tendance" onclick="selectCard('tendance')">
-                <div class="card-icon">📊</div>
-                <div class="card-content">
-                    <h3>Tendance</h3>
-                    <p>Agriculture de précision en hausse</p>
-                </div>
-            </div>
-
-            <div class="card eco" onclick="selectCard('eco')">
-                <div class="card-icon">🌱</div>
-                <div class="card-content">
-                    <h3>Éco-conseil</h3>
-                    <p>Favorisez la biodiversité avec des haies</p>
-                </div>
-            </div> -->
         </div>
 
         <div class="question-section">
@@ -104,7 +88,7 @@
                 return;
             }
         
-            fetch('http://localhost:3000/api/auth/verify', {
+            fetch('https://agroadviceback.onrender.com/api/auth/verify', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -221,7 +205,7 @@
             conversationContainer.scrollTop = conversationContainer.scrollHeight;
         
             try {
-                const res = await fetch('http://localhost:3000/api/bot/userPrompt', {
+                const res = await fetch('https://agroadviceback.onrender.com/api/bot/userPrompt', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

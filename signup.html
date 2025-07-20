@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroAdvice - Inscription</title>
-    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
     <div class="signup-container">
@@ -141,7 +141,7 @@
 
         async function SignupUser(fullName, email, password) {
             try {
-                const response = await fetch('http://localhost:3000/api/auth/signup', {
+                const response = await fetch('https://agroadviceback.onrender.com/api/auth/signup', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json'
