@@ -84,7 +84,7 @@
         
             if (!token) {
                 // Aucun token, redirection vers login
-                window.location.href = '/login.html';
+                window.location.href = 'login.html';
                 return;
             }
         
@@ -103,19 +103,19 @@
                 } else {
                     // Token invalide ou expiré
                     localStorage.removeItem('token');
-                    window.location.href = '/login.html';
+                    window.location.href = 'login.html';
                 }
             })
             .catch(err => {
                 console.error('Erreur lors de la vérification du token', err);
-                window.location.href = '/login.html';
+                window.location.href = 'login.html';
             });
         });
 
         //Deconnexion
         function logout() {
             localStorage.removeItem('token');
-            window.location.href = '/index.html';
+            window.location.href = 'index.html';
         }
 
 
