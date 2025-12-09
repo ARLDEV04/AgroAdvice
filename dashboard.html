@@ -88,7 +88,7 @@
                 return;
             }
         
-            fetch('https://agroadviceback.onrender.com/api/auth/verify', {
+            fetch('https://agroadviceback-b93n.onrender.com/api/auth/verify', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -170,8 +170,6 @@
             textarea.focus();
         }
 
-
-
         function insertTextAtCursor(text) {
             const textarea = document.getElementById('questionText');
             const start = textarea.selectionStart;
@@ -205,7 +203,7 @@
             conversationContainer.scrollTop = conversationContainer.scrollHeight;
         
             try {
-                const res = await fetch('https://agroadviceback.onrender.com/api/bot/userPrompt', {
+                const res = await fetch('https://agroadviceback-b93n.onrender.com/api/bot/userPrompt', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
